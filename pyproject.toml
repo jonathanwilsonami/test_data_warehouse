@@ -1,0 +1,37 @@
+[tool.poetry]
+name = "data-warehouse"
+version = "0.1.0"
+description = "Data warehouse project that depends on tiny-poetry-pkg"
+authors = ["Data Team <data@company.com>"]
+readme = "README.md"
+
+# Use src-layout so imports are consistent and you avoid accidental local-import issues
+packages = [{ include = "data_warehouse", from = "src" }]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+
+# Git-over-SSH dependency (Poetry)
+tiny-poetry-pkg = { git = "ssh://git@github.com/jonathanwilsonami/test_python_package.git", branch = "main" }
+
+# Example runtime deps you might actually have
+# polars = "^1.0.0"
+# sqlalchemy = "^2.0.0"
+
+[tool.poetry.group.test.dependencies]
+pytest = "^8.0.0"
+
+# Expose a pip-friendly extra for tests: pip install "data-warehouse[test]"
+[tool.poetry.extras]
+test = ["pytest"]
+
+[build-system]
+requires = ["poetry-core>=1.7.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.pytest.ini_options]
+markers = [
+  "my_test_suite: user-style install tests"
+]
+testpaths = ["tests"]
+
