@@ -12,7 +12,7 @@ packages = [{ include = "data_warehouse", from = "src" }]
 python = "^3.11"
 
 # Git-over-SSH dependency (Poetry)
-tiny-poetry-pkg = { git = "ssh://git@github.com/jonathanwilsonami/test_python_package.git", branch = "main" }
+tiny-poetry-pkg = { git = "ssh://git@github.com/jonathanwilsonami/test_python_package.git", subdirectory = "tiny-poetry-pkg", branch = "main" }
 
 # Example runtime deps you might actually have
 # polars = "^1.0.0"
