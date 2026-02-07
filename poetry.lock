@@ -279,8 +279,7 @@ requests = "^2.31.0"
 type = "git"
 url = "ssh://git@github.com/jonathanwilsonami/test_python_package.git"
 reference = "main"
-resolved_reference = "5be87803f8f2f4087d3ba73745597a709c47cd92"
-subdirectory = "tiny-poetry-pkg"
+resolved_reference = "f0d1cde653c9c4dd172b828a0ec67c706badbae3"
 
 [[package]]
 name = "urllib3"
@@ -306,4 +305,4 @@ test = []
 [metadata]
 lock-version = "2.1"
 python-versions = "^3.11"
-content-hash = "5101f78e5054fb426c9a43a5d174bf3796a319b1195fd17206caab959df85459"
+content-hash = "26fb93e3fdd43baf73398eca59c4b45ef4cd323a20fe739594ff71334224e29e"
